@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
-import { MatTabsModule } from '@angular/material/tabs';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 
 
 @NgModule({
   exports: [
     MatIconModule,
-    MatTabsModule,
+    MatToolbarModule,
     MatButtonModule,
     MatFormFieldModule,
   ]
