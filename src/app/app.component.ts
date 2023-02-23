@@ -9,8 +9,10 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
 
+  user$ = this.authService.currentUser$;
+
   constructor(
-    public authService: AuthService,
+    private authService: AuthService,
     private router: Router,
               ) {
   }
