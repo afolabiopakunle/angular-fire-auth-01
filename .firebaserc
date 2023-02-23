@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "ang-fire-sign-up": {
+      "hosting": {
+        "ang-fire-auth": [
+          "ang-fire-sign-up"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "ang-fire-sign-up"
+  }
+}

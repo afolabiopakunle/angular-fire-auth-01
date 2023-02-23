@@ -99,6 +99,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "ang-fire-auth:build:production",
+            "firebaseProject": "ang-fire-sign-up",
+            "firebaseHostingSite": "ang-fire-sign-up"
+          }
         }
       }
     }
