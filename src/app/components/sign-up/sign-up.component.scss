@@ -1,0 +1,14 @@
+.form-container {
+  margin: auto;
+  max-width: 400px;
+}
+
+.form-container mat-form-field {
+  width: 100%;
+}
+
+.bottom-floats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

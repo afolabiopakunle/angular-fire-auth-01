@@ -46,4 +46,8 @@ export class SignUpComponent {
   get confirmPassword() {
     return this.form.get('confirmPassword');
   }
+
+  submit() {
+
+  }
 }

@@ -22,6 +22,15 @@ export class SignInComponent {
     private router: Router,
               ) {
   }
+
+  get email() {
+    return this.form.get('email');
+  }
+
+  get password() {
+    return this.form.get('password');
+  }
+
   submit() {
     if(this.form.invalid)
       return;
