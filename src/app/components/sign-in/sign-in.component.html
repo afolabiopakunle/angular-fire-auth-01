@@ -1,1 +1,19 @@
-<p>sign-in works!</p>
+<div class="form-container">
+  <h4>Log in</h4>
+  <form [formGroup]="form">
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input formControlName="email" matInput>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Password</mat-label>
+      <input formControlName="password" matInput>
+    </mat-form-field>
+
+    <div class="bottom-floats pt-3">
+      <button color="primary" mat-raised-button>Log in</button>
+
+      <span >Registered user? <a routerLink="/sign-up">Sign up</a></span>
+    </div>
+  </form>
+</div>

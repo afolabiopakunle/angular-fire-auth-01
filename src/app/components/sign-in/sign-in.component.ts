@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-sign-in',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./sign-in.component.scss']
 })
 export class SignInComponent {
+
+  form = new FormGroup({
+    email: new FormControl(''),
+    password: new FormControl(''),
+  });
+
 
 }
