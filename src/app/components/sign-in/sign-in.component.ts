@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../../services/auth.service';
+import { HotToastService } from '@ngneat/hot-toast';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sign-in',
@@ -16,6 +18,8 @@ export class SignInComponent {
 
   constructor(
     private authService: AuthService,
+    private toast: HotToastService,
+    private router: Router,
               ) {
   }
   submit() {
@@ -25,8 +29,15 @@ export class SignInComponent {
     const email$ = String(email);
     const password$ = String(password);
     this.authService.login(email$, password$)
+      .pipe(
+        this.toast.observe({
+          success: 'Log in successful',
+          loading: 'Loading...',
+          error: 'An error occurred',
+        })
+      )
       .subscribe(() => {
-
+        this.router.navigate(['/home']);
       });
 
   }

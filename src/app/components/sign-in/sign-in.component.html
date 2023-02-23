@@ -1,6 +1,6 @@
 <div class="form-container">
   <h4>Log in</h4>
-  <form [formGroup]="form">
+  <form [formGroup]="form" (ngSubmit)="submit()">
     <mat-form-field>
       <mat-label>Email</mat-label>
       <input formControlName="email" matInput>
@@ -12,7 +12,6 @@
 
     <div class="bottom-floats pt-3">
       <button color="primary" mat-raised-button>Log in</button>
-
       <span >Registered user? <a routerLink="/sign-up">Sign up</a></span>
     </div>
   </form>
