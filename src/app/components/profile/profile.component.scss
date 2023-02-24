@@ -10,3 +10,15 @@
   //object-position: center;
   border-radius: 100%;
 }
+
+.image {
+  position: relative;
+}
+
+.image > button {
+  position: absolute;
+  bottom: 0px;
+  right: 37%;
+  width: 30px;
+  height: 30px
+}

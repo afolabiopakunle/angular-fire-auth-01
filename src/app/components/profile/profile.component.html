@@ -2,6 +2,11 @@
   <h1>User profile</h1>
   <div *ngIf="user$ | async as user" class="image">
     <img [src]="user.photoURL ?? 'assets/images/placeholder.png'" width="120" height="120" [alt]="user.displayName + ' photo'">
+    <button mat-mini-fab (click)="inputField.click()">
+      <mat-icon>edit</mat-icon>
+    </button>
   </div>
+
+  <input type="file" hidden #inputField>
 </div>
 
