@@ -2,9 +2,10 @@
   <span>Welcome to Angular Auth App</span>
 
   <ng-container *ngIf="user$ | async as user; else logInButton">
-    <button mat-button (click)="logout()">
-      <mat-icon>logout</mat-icon>
-      Log out
+    <button mat-button [matMenuTriggerFor]="userMenu">
+      <mat-icon>account_circle</mat-icon>
+      {{ user.displayName }}
+      <mat-icon style="position: absolute; right: -20px">expand_more</mat-icon>
     </button>
   </ng-container>
 
@@ -19,3 +20,7 @@
 <div class="container pt-5">
   <router-outlet></router-outlet>
 </div>
+
+<mat-menu #userMenu='matMenu'>
+  <button mat-menu-item (click)="logout()">Log out</button>
+</mat-menu>
