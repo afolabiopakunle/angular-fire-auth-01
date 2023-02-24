@@ -5,6 +5,7 @@ import { SignInComponent } from './components/sign-in/sign-in.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { HomeComponent } from './components/home/home.component';
 import { canActivate, redirectUnauthorizedTo, redirectLoggedInTo, } from '@angular/fire/auth-guard';
+import { ProfileComponent } from './components/profile/profile.component';
 
 const redirectToLogin = () => redirectUnauthorizedTo(['/log-in']);
 const redirectToHome = () => redirectLoggedInTo(['home'])
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'log-in', component: SignInComponent, ...canActivate(redirectToHome) },
   { path: 'sign-up', component: SignUpComponent, ...canActivate(redirectToHome) },
   { path: 'home', component: HomeComponent, ...canActivate(redirectToLogin) },
+  { path: 'profile', component: ProfileComponent, ...canActivate(redirectToLogin)},
 ];
 
 @NgModule({

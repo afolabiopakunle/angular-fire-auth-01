@@ -14,6 +14,8 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { LandingComponent } from './components/landing/landing.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HotToastModule } from '@ngneat/hot-toast';
+import { getStorage, provideStorage } from '@angular/fire/storage';
+import { ProfileComponent } from './components/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,7 @@ import { HotToastModule } from '@ngneat/hot-toast';
     SignInComponent,
     SignUpComponent,
     LandingComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,6 +34,7 @@ import { HotToastModule } from '@ngneat/hot-toast';
     ReactiveFormsModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
+    provideStorage(() => getStorage()),
     HotToastModule.forRoot(),
   ],
   providers: [],
