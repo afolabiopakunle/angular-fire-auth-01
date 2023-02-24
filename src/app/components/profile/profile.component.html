@@ -1,1 +1,7 @@
-<p>profile works!</p>
+<div class="form-container shadow rounded-2 p-3">
+  <h1>User profile</h1>
+  <div *ngIf="user$ | async as user" class="image">
+    <img [src]="user.photoURL ?? 'assets/images/placeholder.png'" width="120" height="120" [alt]="user.displayName + ' photo'">
+  </div>
+</div>
+
